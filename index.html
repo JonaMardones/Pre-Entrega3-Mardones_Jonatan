@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito de Venta de Mates</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Carrito de Mates</h1>
+    </header>
+    <h1>Carrito de Mates</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="./imagenes/mate1.JPG" alt="Mate Calabaza">
+            <h2>Mate Estilo Calabaza</h2>
+            <p>Precio: $15.00</p>
+            <button class="agregar-carrito" data-id="1">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="./imagenes/mate1.JPG" alt="Mate estilo 2">
+            <h2>Mate Ceramica</h2>
+            <p>Precio: $12.00</p>
+            <button class="agregar-carrito" data-id="2">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="./imagenes/mate1.JPG" alt="Mate estilo 3">
+            <h2>Mate 3D Print</h2>
+            <p>Precio: $18.00</p>
+            <button class="agregar-carrito" data-id="3">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img src="./imagenes/mate1.JPG" alt="Mate estilo 4">
+            <h2>Mate Madera</h2>
+            <p>Precio: $10.00</p>
+            <button class="agregar-carrito" data-id="4">Agregar al Carrito</button>
+        </div>
+        
+        <!-- Más productos aquí -->
+    </div>
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="carrito-lista">
+           
+        </ul>
+        <p>Total: $<span id="carrito-total">0.00</span></p>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+        <button id="comprar">Comprar</button>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <footer>
+        <p>&copy; 2023 Mi Carrito de Mates</p>
+    </footer>
+
+</body>
+
+</html>
