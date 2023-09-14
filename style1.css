@@ -11,10 +11,15 @@ header {
     padding: 20px;
 }
 
+.tituloMate{
+    background-color:#ecebeb;
+    text-align: center;
+}
+
 .productos {
     display:flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     margin: 10px;
 }
 

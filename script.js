@@ -1,8 +1,8 @@
 const productos = [
-    { id: 1, nombre: 'Mate Estilo Calabaza', precio: 10.00 },
+    { id: 1, nombre: 'Mate Estilo Calabaza', precio: 15.00 },
     { id: 2, nombre: 'Mate Estilo 2', precio: 12.00 },
-    // Agrega más productos aquí
-];
+    { id: 3, nombre: 'Mate 3D-Print', precio: 18.00 },
+    { id: 4, nombre: 'Mate Madera', precio: 10.00 },];
 
 const carrito = [];
 const carritoLista = document.getElementById('carrito-lista');
@@ -10,7 +10,7 @@ const carritoTotal = document.getElementById('carrito-total');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 const comprarBtn = document.getElementById('comprar');
 
-// Función para agregar un producto al carrito
+// Agregar un producto al carrito
 function agregarAlCarrito(id) {
     const producto = productos.find(p => p.id === id);
     if (producto) {
@@ -19,27 +19,25 @@ function agregarAlCarrito(id) {
     }
 }
 
-// Función para mostrar los elementos del carrito
+// Mostrar los elementos del carrito
 function mostrarCarrito() {
     carritoLista.innerHTML = '';
     carritoTotal.textContent = calcularTotal().toFixed(2);
 
     carrito.forEach(producto => {
         const li = document.createElement('li');
-        li.innerHTML = `
-            ${producto.nombre} - $${producto.precio.toFixed(2)}
-            <button class="eliminar" data-id="${producto.id}">Eliminar</button>
-        `;
+        li.innerHTML = `${producto.nombre} - $${producto.precio.toFixed(2)}
+            <button class="eliminar" data-id="${producto.id}">Eliminar</button>`;
         carritoLista.appendChild(li);
     });
 }
 
-// Función para calcular el total del carrito
+// Calcular el total del carrito
 function calcularTotal() {
     return carrito.reduce((total, producto) => total + producto.precio, 0);
 }
 
-// Event listeners para agregar productos al carrito
+// Agregar productos al carrito
 document.querySelectorAll('.agregar-carrito').forEach(btn => {
     btn.addEventListener('click', () => {
         const id = parseInt(btn.getAttribute('data-id'));
@@ -47,7 +45,7 @@ document.querySelectorAll('.agregar-carrito').forEach(btn => {
     });
 });
 
-// Event listener para eliminar productos del carrito
+// Eliminar productos del carrito
 carritoLista.addEventListener('click', (e) => {
     if (e.target.classList.contains('eliminar')) {
         const id = parseInt(e.target.getAttribute('data-id'));
@@ -59,22 +57,22 @@ carritoLista.addEventListener('click', (e) => {
     }
 });
 
-// Event listener para vaciar el carrito
+// Vaciar el carrito
 vaciarCarritoBtn.addEventListener('click', () => {
     carrito.length = 0;
     mostrarCarrito();
 });
 
-// Event listener para finalizar la compra
+// Finalizar la compra
 comprarBtn.addEventListener('click', () => {
     if (carrito.length > 0) {
-        alert('Compra realizada con éxito. Gracias por su compra.');
+        alert('Compra realizada con éxito. Disfrute su Mate.');
         carrito.length = 0;
         mostrarCarrito();
     } else {
-        alert('El carrito está vacío. Agregue productos antes de comprar.');
+        alert('El carrito aun está vacío. Agregue el o los Mates para comprar.');
     }
 });
 
-// Mostrar carrito inicialmente
+// Mostrar carrito
 mostrarCarrito();
