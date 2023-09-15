@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Mate de calabaza",
         "precio": 7500.00,
-        "url": "https://raw.githubusercontent.com/JonaMardones/Pre-Entrega3-Mardones_Jonatan/main/mate_calabaza.JPG"
+        "imagen": "https://raw.githubusercontent.com/JonaMardones/Pre-Entrega3-Mardones_Jonatan/main/mate_calabaza.JPG"
     },
     {
         "id": 2,
