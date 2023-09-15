@@ -9,18 +9,18 @@
         "id": 2,
         "nombre": "Mate de cerámica",
         "precio": 3500.00,
-        "imagen" : "mate_ceramica.jpg"
+        "imagen" : "mate_ceramica.JPG"
     },
     {
         "id": 3,
         "nombre": "Mate de vidrio",
         "precio": 2500.00,
-        "imagen": "imagenes/mate_vidrio.jpg"
+        "imagen": "mate_vidrio.JPG"
     },
     {
         "id": 4,
         "nombre": "Mate 3D Print",
         "precio": 4000.00,
-        "imagen": "imagenes/mate_3d-print.jpg"
+        "imagen": "mate_3d-print.JPG"
     }
 ]
