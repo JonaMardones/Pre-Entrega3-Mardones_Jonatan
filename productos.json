@@ -3,24 +3,24 @@
         "id": 1,
         "nombre": "Mate de calabaza",
         "precio": 7500.00,
-        "imagen": "https://raw.githubusercontent.com/JonaMardones/Pre-Entrega3-Mardones_Jonatan/main/mate_calabaza.JPG"
+        "imagen": "mate_calabaza.JPG"
     },
     {
         "id": 2,
         "nombre": "Mate de cerámica",
         "precio": 3500.00,
-        "url" : "imagenes/mate_ceramica.jpg"
+        "imagen" : "mate_ceramica.jpg"
     },
     {
         "id": 3,
         "nombre": "Mate de vidrio",
         "precio": 2500.00,
-        "url": "imagenes/mate_vidrio.jpg"
+        "imagen": "imagenes/mate_vidrio.jpg"
     },
     {
         "id": 4,
         "nombre": "Mate 3D Print",
         "precio": 4000.00,
-        "url": "imagenes/mate_3d-print.jpg"
+        "imagen": "imagenes/mate_3d-print.jpg"
     }
 ]
