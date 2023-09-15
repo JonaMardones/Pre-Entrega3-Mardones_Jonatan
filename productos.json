@@ -3,24 +3,24 @@
         "id": 1,
         "nombre": "Mate de calabaza",
         "precio": 7500.00,
-        "imagen": "mate_calabaza.jpg"
+        "url": "imagenes/mate_calabaza.jpg"
     },
     {
         "id": 2,
         "nombre": "Mate de cerámica",
         "precio": 3500.00,
-        "imagen": "mate_ceramica.jpg"
+        "url" : "imagenes/mate_ceramica.jpg"
     },
     {
         "id": 3,
         "nombre": "Mate de vidrio",
         "precio": 2500.00,
-        "imagen": "mate_vidrio.jpg"
+        "url": "imagenes/mate_vidrio.jpg"
     },
     {
         "id": 4,
         "nombre": "Mate 3D Print",
         "precio": 4000.00,
-        "imagen": "mate_3d-print.jpg"
+        "url": "imagenes/mate_3d-print.jpg"
     }
 ]
