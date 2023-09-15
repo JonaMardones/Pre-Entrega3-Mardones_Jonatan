@@ -9,7 +9,7 @@
         "id": 2,
         "nombre": "Mate de cerámica",
         "precio": 3500.00,
-        "imagen" : "mate_ceramica.JPG"
+        "imagen": "mate_ceramica.JPG"
     },
     {
         "id": 3,
