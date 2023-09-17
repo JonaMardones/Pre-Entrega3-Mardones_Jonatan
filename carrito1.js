@@ -5,14 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
     const finalizarCompraBtn = document.getElementById("finalizar-compra");
 
-    let carrito = [];
+    // Obtener el carrito desde el almacenamiento local si existe
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // trae productos desde json
+    // Cargar productos desde el archivo JSON
     fetch("productos.json")
         .then(response => response.json())
         .then(productos => {
             mostrarProductos(productos);
             agregarListeners(productos);
+            mostrarCarrito();
         });
 
     function mostrarProductos(productos) {
@@ -40,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-
         finalizarCompraBtn.addEventListener("click", finalizarCompra);
     }
 
@@ -52,20 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
             carrito.push({ ...producto, cantidad: 1 });
         }
         mostrarCarrito();
+
+        // Actualizar el almacenamiento local con el carrito actualizado
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }
-
-    // eliminar del carrito todavia no funciona
-    /*carritoLista.addEventListener('click', () => {
-        if (e.target.classList.contains('eliminar')) {
-            const id = parseInt(e.target.getAttribute('data-id'));
-            const index = carrito.findIndex(producto => producto.id === id);
-            if (index !== -1) {
-                carrito.splice(index, 1);
-                mostrarCarrito();
-            }
-        }
-    });*/
-
     //vaciar el carrito
     vaciarCarritoBtn.addEventListener('click', () => {
         carrito.length = 0;
@@ -82,11 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
             total += item.precio * item.cantidad;
         });
         totalElement.textContent = total.toFixed(2);
+
+        // Actualizar el almacenamiento local con el carrito actualizado
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }
 
     function finalizarCompra() {
         alert("¡Gracias por tu compra! El total a pagar es: " + totalElement.textContent + " Pesos Arg. A disfrutar del Mate!");
         carrito = [];
+        mostrarCarrito();
+
+        // Limpiar el carrito y actualizar el almacenamiento local
+        carrito = [];
+        localStorage.removeItem("carrito");
         mostrarCarrito();
     }
 });
