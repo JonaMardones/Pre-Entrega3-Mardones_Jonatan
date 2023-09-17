@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
     const finalizarCompraBtn = document.getElementById("finalizar-compra");
 
-    // Obtener el carrito desde el almacenamiento local si existe
+   
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Cargar productos desde el archivo JSON
+   
     fetch("productos.json")
         .then(response => response.json())
         .then(productos => {
@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         mostrarCarrito();
 
-        // Actualizar el almacenamiento local con el carrito actualizado
+       
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
-    //vaciar el carrito
+   
     vaciarCarritoBtn.addEventListener('click', () => {
         carrito.length = 0;
         mostrarCarrito();
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         totalElement.textContent = total.toFixed(2);
 
-        // Actualizar el almacenamiento local con el carrito actualizado
+        
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         carrito = [];
         mostrarCarrito();
 
-        // Limpiar el carrito y actualizar el almacenamiento local
+        
         carrito = [];
         localStorage.removeItem("carrito");
         mostrarCarrito();
